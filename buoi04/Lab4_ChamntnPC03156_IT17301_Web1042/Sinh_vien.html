@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh Viên</title>
+</head>
+<body>
+    <script type="text/javascript">
+        alert("ChamntnPC03156");
+        var SV=new Object();
+        SV.ten=prompt("Nhập tên: ");
+        SV.diem=Number(prompt("Nhập điểm: "));
+        SV.hocLuc=function(){
+            if(SV.diem>=5){
+                return"Đậu";
+            }else{
+                return"Rớt";
+            }
+        };
+        SV.hienThi=function(){
+            document.write("Họ tên: "+this.ten());
+            document.write("điểm: "+this.diem());
+            document.write("học lực: "+this.hocLuc());
+        };
+
+    </script>
+    <button onclick='SV.hienThi();'>Thông tin sinh viên</button>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sinh Viên</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            alert("ChamntnPC03156");
+            var sv = new Object();
+            sv.hoTen = prompt("Họ và Tên: ");
+            sv.diem = Number(prompt("Điểm: "));
+    
+            sv.hienThi = function(){
+                if(this.diem >= 5){
+                    this.hocLuc = "Đậu";
+                }else{
+                    this.hocLuc = "Rớt";
+                }
+                alert("Họ và tên: " + this.hoTen);
+                alert("Điểm TB: " + this.diem);
+                alert("Học lực: " + this.hocLuc);
+            }
+        </script>
+        <button onclick="sv.hienThi();">Hiển Thị</button>
+    </body>
+    </html>

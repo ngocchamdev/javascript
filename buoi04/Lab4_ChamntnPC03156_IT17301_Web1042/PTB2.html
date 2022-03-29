@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChamntnPC03156</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert("ChamntnPC03156");
+        var PTB2 = new Object();
+        PTB2.a = Number(prompt("Nhap vào a:")); //chỉ xét a khác 0
+        PTB2.b = Number(prompt("Nhap vào b:"));
+        PTB2.c = Number(prompt("Nhap vào c:"));
+        PTB2.delta = function () {
+            return PTB2.b * PTB2.b - 4 * PTB2.a * PTB2.c;
+        };
+        PTB2.GPT = function () {
+            if (PTB2.delta() < 0) {
+                alert("Phương trình vô nghiệm");
+            } else if (PTB2.delta() == 0) {
+                alert("Phương trình có nghiệm kép x1=x2=" + -PTB2.b / (2 * PTB2.a));
+            } else {
+                let x1 = (-PTB2.b - Math.sqrt(PTB2.delta())) / (2 * PTB2.a);
+                let x2 = (-PTB2.b + Math.sqrt(PTB2.delta())) / (2 * PTB2.a);
+                alert("Phương trình có nghiệm kép \n x1=  " + x1 + " \n x2=  " + x2);
+            }
+        };
+    </script>
+    <button onClick='PTB2.GPT()'>Giải phương trình</button>
+</body>
+
+</html>

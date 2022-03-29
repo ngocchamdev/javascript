@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+</head>
+<body>
+    <script type="text/javascript">
+        alert("ChamntnPC03156");
+      var tam=new object();
+      function mo(){
+          tam=window.open("https://www.google.com/");
+      }
+      function dong(){
+          if(tam){
+               tam.close();
+            } 
+        }
+        function kiemTra(){
+            if(tam.closed==true){
+                alert("Đã đóng");
+            }else{
+                alert("Chưa đóng");
+        }
+        }
+    </script>
+     <button onclick="mo();"> Mở trang</button> 
+   <button onclick="dong();"> Đóng</button> 
+   <button onclick="kiemTra();">Kiểm tra</button> 
+</body>
+</html>

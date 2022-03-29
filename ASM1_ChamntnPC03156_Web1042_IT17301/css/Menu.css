@@ -1,0 +1,41 @@
+article{
+    width: 90%;
+    min-height: 400px;
+    background-color: white;
+    float: right;
+    position: relative;
+}
+aside{ 
+    width: 10%;
+    height: auto;
+    float: left;
+    line-height: 40px;
+}
+aside div{
+    margin-top: 150px;
+ }
+ aside>div>li{
+     list-style: circle;
+     margin-left: 20px;
+ }
+ aside>div>li>a{
+    color: black;
+    text-decoration: none;
+}
+aside>div>li>a:hover{
+    color: orange;  
+    font-weight: bold;
+}
+iframe[name=page]{
+    width: 100%;
+    min-height: 900px;
+}
+aside>div{
+position: absolute;
+left: 0px;
+top: 5px;
+}
+iframe[name=menu]{
+    width: 100%;
+    min-height: 1000px;
+}

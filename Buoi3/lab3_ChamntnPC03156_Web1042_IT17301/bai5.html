@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giai Phuong Trinh Bac 2</title>
+    
+</head>
+
+<body>
+    <div>
+        <h3>Giai Phuong Trinh Bac Hai: ax^2 + bx + c = 0</h3>
+    </div>
+    <br />
+    <div >
+        <input class="button" type="text" value="Nhap a: " onclick="input_a()">
+        <input class="button" type="text" value="Nhap b: " onclick="input_b()">
+        <input class="button" type="text" value="Nhap c: " onclick="input_c()">
+        <input class="button" type="button" value="Tinh Ket Qua" onclick="kq()">
+    </div>
+    <script type="text/javascript">
+        var a;
+        var b;
+        var c;
+        function input_a() {
+
+            a = parseFloat( prompt("Input a: "));
+
+        }
+
+        function input_b() {
+
+            b = parseFloat( prompt("Input b: "));
+
+        }
+        function input_c() {
+
+            c = parseFloat( prompt("Input c: "));
+        }
+        function kq() {
+            var delta = parseFloat(Math.pow(b, 2) - 4 * a * c)
+            if (delta < 0) {
+                alert("Phương trình vô nghiệm");
+            } else if (delta == 0) {
+                alert("Phương trình có nghiệm kép: " + (parseFloat((-b / (2 * a)))));
+            } else {
+                var x1 =parseFloat( (-b + Math.sqrt(delta)) / (2 * a));
+                var x2 =parseFloat( (-b - Math.sqrt(delta)) / (2 * a));
+           alert("Phương trình có 2 nghiệm phân biệt: X1=" +x1+ " X2=" +x2);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
