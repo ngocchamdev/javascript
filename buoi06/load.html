@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var hoaover = new Image();
+        var hoaout = new Image();
+        function loadAnh() {
+            hoaover.src = "hinh-nen-tieu-cuong-thi-full-hd-cho-may-tinh-28.jpg";
+            hoaout.src = "hinh-anh-hoa-huong-duong-1.jpg";
+        }
+        function onMouseOverEvent() {
+            document.img_hoa.src = hoaover.src
+        }
+        function onMouseOutEvent() {
+            document.img_hoa.src = hoaout.src
+        }
+    </script>
+</head>
+
+<body onload="loadAnh();">
+    <img name="img_hoa" src="hinh-anh-hoa-huong-duong-1.jpg" onmouseover="onMouseOverEvent();" onmouseout="onMouseOutEvent();" />
+</body>
+
+</html>

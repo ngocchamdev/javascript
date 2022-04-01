@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function xanhButtonClick() {
+        var pText = document.getElementById("pText");
+        pText.style.color = "blue";
+        pText.innerText="bạn đã click vào nút xanh"
+        }
+        function doButtonClick() {
+        var pText = document.getElementById("pText");
+        pText.style.color = "red";
+        pText.innerText="bạn đã click vào nút đỏ"
+        }
+        </script>
+</head>
+<body>
+    <p id="pText">Thiet lap style bang ID</p>
+<button onclick="xanhButtonClick();">Xanh</button>
+<button onclick="doButtonClick();">Do</button>
+</body>
+</html>
