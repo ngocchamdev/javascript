@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ChamntnPC03156</title>
+        <script type="text/javascript">
+
+            function kiem_tra() {
+                var tenSP = document.forms["f1"]["san_pham"];
+                if (tenSP.value == "") {
+                    alert("Nhập lại tên sản phẩm");
+                    tenSP.focus();
+                    return false;
+                }
+                var loai = document.forms["f1"]["loai"];
+                if (loai.value == "0") {
+                    alert("Chọn lại loai sản phẩm");
+                    tenSP.focus();
+                    return false;
+                }
+                var don_gia = document.forms["f1"]["don_gia"];
+                if (isNaN(don_gia.value) | don_gia.value=="") {
+                    alert("Vui lòng nhập số");
+                    don_gia.focus();
+                    return false;
+                }
+                else if (parseFloat(don_gia.value) < 0) {
+                    alert("Vui lòng nhập số dương");
+                    don_gia.focus();
+                    return false;
+                }
+            }
+                function hien_thi(giatri) {
+                    var phi_vc = document.getElementById("phi_vc");
+                    if(giatri==true) {
+                        phi_vc.style.display="block";
+                    }
+                    else{
+                        phi_vc.style.display="none";
+                    }
+                }                                                                                   
+        </script>
+    </head>
+    
+    <body>
+        <h2>ĐẶT HÀNG</h2>
+        <form name="f1" onsubmit=" kiem_tra()">
+            <p>
+                <label>Sản phẩm</label>
+                <input name="san_pham" />
+            </p>
+            <p>
+                <label>Loại</label>
+                <select name="loai">
+                    <option value="0"></option>
+                    <option value="DT">Điện thoại</option>
+                    <option value="MT">Máy tính</option>
+                </select>
+            </p>
+            <p>
+                <label>Đơn giá</label>
+                <input type="text" name="don_gia" />
+            </p>
+            <p>
+                <label>Nơi nhận hàng</label>
+                <input type="radio" name="dia_chi" onclick="hien_thi(false)" />Nội thành
+                <input type="radio" name="dia_chi" onclick="hien_thi(true)" />Ngoại thành
+            </p>
+            <p id="phi_vc" style="display:none">
+                <label>Phí vận chuyển</label>
+                <input value="100000" readonly />
+            </p>
+            <hr />
+            <button onclick="kiem_tra()">Đặt mua</button>
+        </form>
+    </body>
+</html>
